@@ -1,5 +1,6 @@
-setx /m PATH "%PATH%;C:..\jdk\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\bin"
-java -version
 setx /m JAVA_HOME "c:..\jdk\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri"
+setx /m PATH "%PATH%;%JAVA_HOME%\bin"
+java -version
+
 //remove before java version
-set PATH=%PATH:C:\Program Files\Amazon Corretto\jdk1.8.0_302\bin;=%
+set PATH=%PATH:..\jdk\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\bin;=%
