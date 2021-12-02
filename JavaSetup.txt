@@ -1,3 +1,5 @@
-setx /m PATH "%PATH%;C:\Progra~1\RedHat\java-1.8.0-openjdk-1.8.0.181-1\bin"
+setx /m PATH "%PATH%;C:..\jdk\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\bin"
 java -version
-setx /m JAVA_HOME "C:\Progra~1\RedHat\java-1.8.0-openjdk-1.8.0.181-1"
+setx /m JAVA_HOME "c:..\jdk\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri"
+//remove before java version
+set PATH=%PATH:C:\Program Files\Amazon Corretto\jdk1.8.0_302\bin;=%
