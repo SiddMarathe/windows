@@ -1,10 +1,10 @@
 ﻿
+$envVariableTarget = Read-Host -Prompt 'Enter the target env for the variable.(User or Machine)'
 $variable_name = Read-Host -Prompt 'variable Name'
-Write-Host $variable_name
 $variable_value = Read-Host -Prompt 'Variable Value'
-Write-Host $variable_value
-[Environment]::GetEnvironmentVariable($variable_name, 'User')
-[Environment]::SetEnvironmentVariable($variable_name, $variable_value, 'User')
-$path = [Environment]::GetEnvironmentVariable('Path', 'User')
+Write-Host "$variable_name Env variable will be set as $variable_value for $envVariableTarget"
+[Environment]::GetEnvironmentVariable($variable_name, $envVariableTarget )
+[Environment]::SetEnvironmentVariable($variable_name, $variable_value, $envVariableTarget )
+$path = [Environment]::GetEnvironmentVariable('Path', $envVariableTarget )
 $newpath = $path + ';' + $variable_value + '\bin'
-[Environment]::SetEnvironmentVariable("Path", $newpath, 'User')
+[Environment]::SetEnvironmentVariable("Path", $newpath, $envVariableTarget )
